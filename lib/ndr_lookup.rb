@@ -1,3 +1,9 @@
+require 'ndr_lookup/locator_hub/matched_record'
+require 'ndr_lookup/locator_hub/client'
+require 'ndr_lookup/locator_hub/queue'
+require 'ndr_lookup/nhsd_ods/code_systems'
+require 'ndr_lookup/nhsd_ods/client'
+require 'ndr_lookup/nhsd_ods/organisation'
 require 'ndr_lookup/version'
 
 module NdrLookup
