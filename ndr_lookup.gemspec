@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'NDR Lookup library'
   spec.description   = 'NDR library to consume lookup data APIs'
-  spec.homepage      = 'https://github.com/PublicHealthEngland/ndr_lookup'
+  spec.homepage      = 'https://github.com/NHSDigital/ndr_lookup'
   spec.license       = 'MIT'
 
   # Specify which files should be added to the gem when it is released.

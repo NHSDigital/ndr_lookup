@@ -1,6 +1,11 @@
 ## [Unreleased]
+* No unreleased changes
+
+## 0.1.1 / 2022-11-15
+### Added
 * Added NHS Digital ODS API client
 * Drop support for Ruby 2.6
 
+## 0.1.0 / Unreleased
 ### Added
 * Added existing ArcGIS LocatorHub address `Rectify` client
