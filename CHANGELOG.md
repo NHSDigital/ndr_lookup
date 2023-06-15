@@ -1,5 +1,6 @@
 ## [Unreleased]
-* No unreleased changes
+### Added
+* Support Ruby 3.2. Drop support for Ruby 2.7, Rails 6.0
 
 ## 0.1.2 / 2022-12-08
 ### Fixed

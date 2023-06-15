@@ -21,8 +21,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'activeresource', '>= 6.0', '< 7.1'
-  spec.add_dependency 'activesupport', '>= 6.0', '< 7.1'
+  spec.add_dependency 'activeresource', '>= 6.0', '< 7'
+  spec.add_dependency 'activesupport', '>= 6.1', '< 7.1'
   spec.add_dependency 'httpi', '~> 2.4'
   spec.add_dependency 'rubyntlm', '~> 0.6'
 
@@ -32,5 +32,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '>= 12.3.3'
   spec.add_development_dependency 'webmock'
 
-  spec.required_ruby_version = '>= 2.7'
+  spec.required_ruby_version = '>= 3.0'
 end
