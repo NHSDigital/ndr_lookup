@@ -22,8 +22,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'activeresource', '>= 6.0', '< 7'
-  spec.add_dependency 'activesupport', '>= 6.1', '< 7.1'
-  spec.add_dependency 'httpi', '~> 2.4'
+  spec.add_dependency 'activesupport', '>= 7.0', '< 8.1'
+  spec.add_dependency 'httpi', '~> 4.0'
   spec.add_dependency 'rubyntlm', '~> 0.6'
 
   spec.add_development_dependency 'bundler', '~> 2.0'
