@@ -1,90 +1,194 @@
 ---
 file safety:
+  ".github/CODEOWNERS":
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 54e7746b7f2468ee4055723e9f1f1f0360871dc8
+  ".github/workflows/lint.yml":
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 9a92838129dab872eaea1fc1d1b2c65ec02c183f
+  ".github/workflows/test.yml":
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: aa91cd09121909cd2170c58fe5af9b68fd1a2456
   ".gitignore":
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
   ".rubocop.yml":
-    comments: 
-    reviewed_by: timgentry
-    safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: fcba40521cbfe89b237e08b15f94129a89724846
   ".travis.yml":
-    comments: 
-    reviewed_by: timgentry
-    safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 18964c87034df7f8aaf7318135b70248d0e461db
   CHANGELOG.md:
-    comments: 
-    reviewed_by: josh.pencheon
-    safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: aa91cd09121909cd2170c58fe5af9b68fd1a2456
   CODE_OF_CONDUCT.md:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
   Gemfile:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
   LICENSE.txt:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
   README.md:
-    comments: 
-    reviewed_by: timgentry
-    safe_revision: 117fb2e5a4648f8b85c3d212ea6dac7f90185969
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 4b6612f62b9d0cdec9fa080e08e0541457ba4622
   Rakefile:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
   bin/console:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
   bin/setup:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
+  gemfiles/Gemfile.rails70:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: b62cdb143fcb9760ffc710ff0df1233b7bcdf841
+  gemfiles/Gemfile.rails71:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: aa91cd09121909cd2170c58fe5af9b68fd1a2456
+  gemfiles/Gemfile.rails72:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: aa91cd09121909cd2170c58fe5af9b68fd1a2456
+  gemfiles/Gemfile.rails80:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: aa91cd09121909cd2170c58fe5af9b68fd1a2456
   lib/ndr_lookup.rb:
-    comments: 
-    reviewed_by: timgentry
-    safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 5f3c8ef45ca4c4f747ea51a9c1afb4887582cd19
   lib/ndr_lookup/locator_hub/client.rb:
-    comments: 
+    comments:
     reviewed_by: josh.pencheon
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
   lib/ndr_lookup/locator_hub/matched_record.rb:
-    comments: 
-    reviewed_by: josh.pencheon
-    safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 53e7899913b50af4a518fa402419286da321fbdb
   lib/ndr_lookup/locator_hub/queue.rb:
-    comments: 
-    reviewed_by: josh.pencheon
-    safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 53e7899913b50af4a518fa402419286da321fbdb
+  lib/ndr_lookup/nhsd_ods/client.rb:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 4e81189405a9bda4674c43d5290c83e53edd2cf9
+  lib/ndr_lookup/nhsd_ods/code_systems.rb:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: f35dd4a3c26439681f82a9fb4cd58b35751bee3a
+  lib/ndr_lookup/nhsd_ods/organisation.rb:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 4e81189405a9bda4674c43d5290c83e53edd2cf9
   lib/ndr_lookup/tasks.rb:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
   lib/ndr_lookup/version.rb:
-    comments: 
-    reviewed_by: timgentry
-    safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 5a255ccbccd4527d06459ad4d88bb0f760f5a0e5
   lib/tasks/locator_hub.rake:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
   ndr_lookup.gemspec:
-    comments: 
-    reviewed_by: timgentry
-    safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: aa91cd09121909cd2170c58fe5af9b68fd1a2456
   test/locator_hub/client_test.rb:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
   test/ndr_lookup_test.rb:
-    comments: 
+    comments:
     reviewed_by: timgentry
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
+  test/nhsd_ods/client_test.rb:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 4e81189405a9bda4674c43d5290c83e53edd2cf9
+  test/nhsd_ods/code_systems_test.rb:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: f35dd4a3c26439681f82a9fb4cd58b35751bee3a
+  test/nhsd_ods/organisation_test.rb:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: bff10e86557e6039d21cdc7c2225afbea39f3f28
+  test/responses/nhsd_ods/metadata_not_found_response.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: f35dd4a3c26439681f82a9fb4cd58b35751bee3a
+  test/responses/nhsd_ods/organisation_all_not_acceptable_response.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 4e81189405a9bda4674c43d5290c83e53edd2cf9
+  test/responses/nhsd_ods/organisation_find_success_response.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 4e81189405a9bda4674c43d5290c83e53edd2cf9
+  test/responses/nhsd_ods/recordclass_all_success_response.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: f35dd4a3c26439681f82a9fb4cd58b35751bee3a
+  test/responses/nhsd_ods/recordclass_find_success_response.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: f35dd4a3c26439681f82a9fb4cd58b35751bee3a
+  test/responses/nhsd_ods/rel_all_success_response.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: f35dd4a3c26439681f82a9fb4cd58b35751bee3a
+  test/responses/nhsd_ods/rel_find_success_response.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: f35dd4a3c26439681f82a9fb4cd58b35751bee3a
+  test/responses/nhsd_ods/role_all_success_response.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: f35dd4a3c26439681f82a9fb4cd58b35751bee3a
+  test/responses/nhsd_ods/role_find_success_response.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: f35dd4a3c26439681f82a9fb4cd58b35751bee3a
+  test/responses/nhsd_ods/search_not_acceptable_response.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 4e81189405a9bda4674c43d5290c83e53edd2cf9
+  test/responses/nhsd_ods/search_success_response.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 4e81189405a9bda4674c43d5290c83e53edd2cf9
+  test/responses/nhsd_ods/sync_not_acceptable_response.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 4e81189405a9bda4674c43d5290c83e53edd2cf9
+  test/responses/nhsd_ods/sync_success_response.txt:
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 4e81189405a9bda4674c43d5290c83e53edd2cf9
   test/test_helper.rb:
-    comments: 
-    reviewed_by: timgentry
-    safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
+    comments:
+    reviewed_by: brian.shand
+    safe_revision: 4e81189405a9bda4674c43d5290c83e53edd2cf9
