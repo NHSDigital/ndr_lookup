@@ -28,7 +28,7 @@ module NdrLookup
         # @return [Hash] Parsed FHIR resource
         def find(resource_type, id)
           response = connection.get(
-            "#{ENDPOINT}#{resource_type}/#{id}",
+            "#{ENDPOINT}/#{resource_type}/#{id}",
             headers
           )
           JSON.parse(response.body)
@@ -50,10 +50,22 @@ module NdrLookup
         # @example Search for relationships
         #   Client.search('OrganizationAffiliation', organization: 'RHAGX')
         def search(resource_type, params = {})
-          query = HTTPI::QueryBuilder::Flat.build(params)
-          request = "#{ENDPOINT}#{resource_type}?#{query}"
-          # Change to use the same connection and headers as find
-          response = connection.get(request, headers)
+          url = "#{ENDPOINT}/#{resource_type}"
+
+          # Add query parameters if any exist
+          if params.any?
+            # Convert params to proper query string format
+            query_string = params.map do |key, value|
+              "#{CGI.escape(key.to_s)}=#{CGI.escape(value.to_s)}"
+            end.join('&')
+
+            url = "#{url}?#{query_string}"
+          end
+
+          # Make the request
+          response = connection.get(url, headers)
+
+          # Process response
           payload = JSON.parse(response.body)
           raise_unless_response_success(response, payload)
 
@@ -81,7 +93,7 @@ module NdrLookup
 
         # Raises an error unless response is successful
         def raise_unless_response_success(response, payload)
-          return if response.code == 200
+          return if response.code == '200'
 
           error_message = payload['errorText'] || 'Unknown error'
           raise ApiError, "#{payload['errorCode']} - #{error_message}"
