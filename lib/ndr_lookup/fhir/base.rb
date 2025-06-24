@@ -28,17 +28,6 @@ module NdrLookup
         # Finds a specific FHIR resource by type and ID
         # @return [Hash] Parsed FHIR resource
         def find(resource_type, id)
-        #   response = connection.get(
-        #     "#{ENDPOINT}/#{resource_type}/#{id}",
-        #     headers
-        #   )
-        #   JSON.parse(response.body)
-        # rescue ActiveResource::ResourceNotFound
-        #   raise ResourceNotFound, "#{resource_type} with ID '#{id}' not found"
-        # rescue JSON::ParserError
-        #   raise InvalidResponse, 'Invalid JSON response from server'
-        # rescue StandardError => e
-        #   raise ApiError, "Unexpected error: #{e.message}"
         response = connection.get(
           "#{endpoint}/#{resource_type}/#{id}",
           headers
@@ -66,30 +55,6 @@ module NdrLookup
         # @example Search for relationships
         #   Client.search('OrganizationAffiliation', organization: 'RHAGX')
         def search(resource_type, params = {})
-        #   url = "#{endpoint}/#{resource_type}"
-        #
-        #   # Add query parameters if any exist
-        #   if params.any?
-        #     # Convert params to proper query string format
-        #     query_string = params.map do |key, value|
-        #       "#{CGI.escape(key.to_s)}=#{CGI.escape(value.to_s)}"
-        #     end.join('&')
-        #
-        #     url = "#{url}?#{query_string}"
-        #   end
-        #
-        #   # Make the request
-        #   response = connection.get(url, headers)
-        #
-        #   # Process response
-        #   payload = JSON.parse(response.body)
-        #   raise_unless_response_success(response, payload)
-        #
-        #   payload
-        # rescue JSON::ParserError
-        #   raise InvalidResponse, 'Invalid JSON response from server'
-        # rescue StandardError => e
-        #   raise ApiError, "Search failed: #{e.message}"
           url = construct_url(endpoint, resource_type, params)
 
           # Make the request
