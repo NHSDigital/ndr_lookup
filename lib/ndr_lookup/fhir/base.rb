@@ -3,10 +3,10 @@ require 'active_support'
 require 'active_support/core_ext'
 
 module NdrLookup
-  module Fihr
+  module Fhir
     # Client for interacting with the NHS Digital FHIR API
     class Base
-      ENDPOINT = 'https://api.service.nhs.uk/organisation-data-terminology-api/fhir'.freeze
+      # ENDPOINT = 'https://api.service.nhs.uk/organisation-data-terminology-api/fhir'.freeze
 
       class ApiError < StandardError; end
       class ResourceNotFound < ApiError; end
@@ -20,6 +20,7 @@ module NdrLookup
         end
 
         # Not implemented yet - will handle syncing data when this is available
+        # TODO: This has become 'search'. We'd have to rewrite sync functionality via search
         def sync(date)
           raise NotImplementedError
         end
@@ -103,7 +104,6 @@ module NdrLookup
           raise InvalidResponse, 'Invalid JSON response from server'
         rescue StandardError => e
           raise ApiError, "Search failed: #{e.message}"
-          
         end
 
         private
@@ -120,6 +120,8 @@ module NdrLookup
 
             url = "#{url}?#{query_string}"
           end
+
+          url
         end
 
         # @return [ActiveResource::Connection] Configured connection instance

@@ -1,13 +1,14 @@
-require 'active_resource'
-require 'active_support'
-require 'active_support/core_ext'
+# require 'active_resource'
+# require 'active_support'
+# require 'active_support/core_ext'
+require_relative '../base'
 
 module NdrLookup
-  module Fihr
+  module Fhir
     module Ods
       # Client for interacting with the NHS Digital FHIR API
       class Client < Base
-        FIHR_ODS_ENDPOINT = 'https://api.service.nhs.uk/organisation-data-terminology-api/fhir'.freeze
+        FHIR_ODS_ENDPOINT = 'https://api.service.nhs.uk/organisation-data-terminology-api/fhir'.freeze
 
         # class ApiError < StandardError; end
         # class ResourceNotFound < ApiError; end
@@ -42,7 +43,7 @@ module NdrLookup
           # end
 
           def endpoint
-            FIHR_ODS_ENDPOINT
+            FHIR_ODS_ENDPOINT
           end
           # Searches for FHIR resources using the provided parameters
           # @param resource_type [String] The type of FHIR resource to search for
