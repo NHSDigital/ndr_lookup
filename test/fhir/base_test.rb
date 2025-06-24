@@ -10,8 +10,7 @@ module NdrLookup
         url  = 'https://api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization?Name=Moorfields'
         file = File.new(RESPONSES_DIR + '/fhir/search_success_response.txt')
         stub_request(:get, url).to_return(file)
-        # response = NdrLookup::Fhir::OdsClient.search('Organization', Name: 'Moorfields')
-        response = NdrLookup::Fhir::Ods::Client.search('Organization', Name: 'Moorfields')
+        response = TestClient.search('Organization', Name: 'Moorfields')
 
         assert_kind_of(Hash, response)
       end
@@ -69,6 +68,15 @@ module NdrLookup
       #     NdrLookup::NhsdOds::Client.search(wrong_param: 'nhs')
       #   end
       # end
+    end
+
+    # TODO: use a test class
+    class TestClient < Fhir::Base
+      class << self
+        def endpoint
+          'https://api.service.nhs.uk/organisation-data-terminology-api/fhir'
+        end
+      end
     end
   end
 end
