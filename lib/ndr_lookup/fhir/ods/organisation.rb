@@ -3,12 +3,12 @@ require 'active_resource'
 require_relative 'client'
 
 module NdrLookup
-  module Fihr
+  module Fhir
     module Ods
       # Represents an Organization resource from the NHS Digital FHIR API
       class Organisation < ActiveResource::Base
         self.include_format_in_path = false
-        self.site = Client::ENDPOINT
+        self.site = Client::FHIR_ODT_ENDPOINT
         self.collection_name = 'Organization'
 
         class << self

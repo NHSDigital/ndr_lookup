@@ -6,7 +6,7 @@ module NdrLookup
   module Fhir
     # test shared functionality
     class BaseTest < Minitest::Test
-      def test_organisation_should_have_model_like_behaviour
+      def test_find_resource
         url  = ODT_ENDPOINT + '/Organization/X26'
         file = File.new(RESPONSES_DIR + '/fhir/organisation_find_success_response.txt')
         stub_request(:get, url).to_return(file)
@@ -26,7 +26,6 @@ module NdrLookup
       end
 
       def test_should_raise_error_if_invalid_json_response_received
-        url  = ODT_ENDPOINT + 'Organization/X26'
         stub_request(:get, "https://api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/X26").
           with(
             headers: {
