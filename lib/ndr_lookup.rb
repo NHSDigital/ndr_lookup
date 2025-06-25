@@ -5,8 +5,8 @@ require 'ndr_lookup/nhsd_ods/code_systems'
 require 'ndr_lookup/nhsd_ods/client'
 require 'ndr_lookup/nhsd_ods/organisation'
 require 'ndr_lookup/version'
-require 'ndr_lookup/nhsd_ods_fhir/client'
-require 'ndr_lookup/nhsd_ods_fhir/organisation'
+require 'ndr_lookup/fhir/ods/client'
+require 'ndr_lookup/fhir/ods/organisation'
 
 module NdrLookup
   class Error < StandardError; end
