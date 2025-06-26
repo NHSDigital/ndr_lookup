@@ -4,6 +4,7 @@ module NdrLookup
   module Fhir
     module Ods
       # Client for interacting with the NHS Digital FHIR API
+      # See https://digital.nhs.uk/developer/api-catalogue/organisation-data-terminology
       class Client < Base
         FHIR_ODT_ENDPOINT = 'https://api.service.nhs.uk/organisation-data-terminology-api/fhir'.freeze
 
