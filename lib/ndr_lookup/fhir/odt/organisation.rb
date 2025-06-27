@@ -4,7 +4,7 @@ require_relative 'client'
 
 module NdrLookup
   module Fhir
-    module Ods
+    module Odt
       # Represents an Organization resource from the NHS Digital FHIR API
       class Organisation < ActiveResource::Base
         self.include_format_in_path = false

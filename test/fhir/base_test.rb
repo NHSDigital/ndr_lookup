@@ -1,6 +1,5 @@
 require 'test_helper'
 require 'active_support/core_ext/time'
-require 'ndr_lookup/fhir/ods/client'
 
 module NdrLookup
   module Fhir

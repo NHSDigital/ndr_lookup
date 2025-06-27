@@ -2,7 +2,7 @@ require_relative '../base'
 
 module NdrLookup
   module Fhir
-    module Ods
+    module Odt
       # Client for interacting with the NHS Digital FHIR API
       # See https://digital.nhs.uk/developer/api-catalogue/organisation-data-terminology
       class Client < Base
