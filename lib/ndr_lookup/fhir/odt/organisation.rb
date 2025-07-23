@@ -18,8 +18,14 @@ module NdrLookup
             response = Client.find('Organization', id)
             new(response)
           rescue Client::ResourceNotFound => e
-            Rails.logger.error("Organization not found: #{e.message}")
+            logger.error("Organization not found: #{e.message}")
             nil
+          end
+
+          # ActiveRecord subs .all in to /all which then becomes like finding the id 'all'
+          # so we have to explicitly block this if we want it to not be a thing.
+          def all
+            raise NotImplementedError, 'Use search method instead of all'
           end
 
           # Searches for organizations matching the provided parameters
@@ -30,8 +36,18 @@ module NdrLookup
 
             response['entry'].map { |entry| new(entry['resource']) }
           rescue Client::ApiError => e
-            Rails.logger.error("Organization search failed: #{e.message}")
+            logger.error("Organization search failed: #{e.message}")
             []
+          end
+
+          private
+
+          def logger
+            @logger ||= if defined?(Rails) && Rails.respond_to?(:logger)
+                          Rails.logger
+                        else
+                          Logger.new($stdout)
+                        end
           end
         end
 

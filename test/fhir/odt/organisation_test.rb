@@ -15,11 +15,9 @@ module NdrLookup
           assert_equal org.name, 'NHS ENGLAND - X26'
         end
 
+        # ActiveResource .all hits NotImplementedError
         def test_should_raise_error_if_not_valid_find_method
-          url  = "#{ODT_ENDPOINT}/Organization/all"
-          file = File.new("#{RESPONSES_DIR}/fhir/organisation_all_not_acceptable_response.txt")
-          stub_request(:get, url).to_return(file)
-          assert_raises do
+          assert_raises(NotImplementedError) do
             NdrLookup::Fhir::Odt::Organisation.all
           end
         end
