@@ -41,12 +41,15 @@ module NdrLookup
         end
       end
 
-      def test_should_raise_any_other_error
-        # TODO: what path would get here?
+      def test_should_raise_api_error_on_timeout
+        stub_request(:get, "#{ODT_ENDPOINT}/Organization/X26").to_timeout
+
+        assert_raises(Fhir::Base::ApiError) do
+          TestClient.find('Organization', 'X26')
+        end
       end
     end
 
-    # TODO: use a test class
     class TestClient < Fhir::Base
       class << self
         def endpoint
