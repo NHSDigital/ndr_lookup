@@ -21,6 +21,28 @@ module NdrLookup
             NdrLookup::Fhir::Odt::Organisation.all
           end
         end
+
+        def test_find_returns_organisation_instance_from_api_response
+          url = "#{ODT_ENDPOINT}/Organization/X26"
+          file = File.new("#{RESPONSES_DIR}/fhir/organisation_find_success_response.txt")
+          stub_request(:get, url).to_return(file)
+
+          org = Organisation.find('X26')
+
+          assert_instance_of Organisation, org
+          assert_equal 'X26', org.id
+          assert_equal 'NHS ENGLAND - X26', org.name
+        end
+
+        def test_find_handles_resource_not_found_gracefully
+          url = "#{ODT_ENDPOINT}/Organization/MISSING"
+          file = File.new("#{RESPONSES_DIR}/fhir/metadata_not_found_response.txt")
+          stub_request(:get, url).to_return(file)
+
+          org = Organisation.find('MISSING')
+
+          assert_nil org
+        end
       end
     end
   end
