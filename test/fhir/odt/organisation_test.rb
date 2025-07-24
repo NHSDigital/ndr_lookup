@@ -39,7 +39,7 @@ module NdrLookup
           file = File.new("#{RESPONSES_DIR}/fhir/metadata_not_found_response.txt")
           stub_request(:get, url).to_return(file)
 
-          org = Organisation.find('MISSING')  # This will display on stdout because of change to Logger.
+          org = Organisation.find('MISSING') # This will display on stdout because of change to Logger.
 
           assert_nil org
         end
