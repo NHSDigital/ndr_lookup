@@ -18,7 +18,7 @@ module NdrLookup
             response = Client.find('Organization', id)
             new(response)
           rescue Client::ResourceNotFound => e
-            logger.error("Organization not found: #{e.message}")
+            logger.info("Organization not found: #{e.message}")
             nil
           end
 
@@ -36,7 +36,7 @@ module NdrLookup
 
             response['entry'].map { |entry| new(entry['resource']) }
           rescue Client::ApiError => e
-            logger.error("Organization search failed: #{e.message}")
+            logger.info("Organization search failed: #{e.message}")
             []
           end
 
