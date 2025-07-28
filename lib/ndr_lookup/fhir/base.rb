@@ -28,17 +28,17 @@ module NdrLookup
         # Finds a specific FHIR resource by type and ID
         # @return [Hash] Parsed FHIR resource
         def find(resource_type, id)
-        response = connection.get(
-          "#{endpoint}/#{resource_type}/#{id}",
-          headers
-        )
-        JSON.parse(response.body)
+          response = connection.get(
+            "#{endpoint}/#{resource_type}/#{id}",
+            headers
+          )
+          JSON.parse(response.body)
         rescue ActiveResource::ResourceNotFound
           raise ResourceNotFound, "#{resource_type} with ID '#{id}' not found"
         rescue JSON::ParserError
           raise InvalidResponse, 'Invalid JSON response from server'
         rescue StandardError => e
-          raise ApiError, "Unexpected error: #{e.message}"          
+          raise ApiError, "Unexpected error: #{e.message}"
         end
 
         def endpoint
