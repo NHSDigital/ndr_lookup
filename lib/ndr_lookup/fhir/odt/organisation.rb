@@ -6,7 +6,7 @@ module NdrLookup
   module Fhir
     module Odt
       # Represents an Organization resource from the NHS Digital FHIR API
-      class Organisation < ActiveResource::Base
+      class Organisation < Base
         self.include_format_in_path = false
         self.site = Client::FHIR_ODT_ENDPOINT
         self.collection_name = 'Organization'

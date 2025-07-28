@@ -5,7 +5,7 @@ require 'active_support/core_ext'
 module NdrLookup
   module Fhir
     # Client for interacting with the NHS Digital FHIR API
-    class Base
+    class Base < ActiveResource::Base
       # ENDPOINT = 'https://api.service.nhs.uk/organisation-data-terminology-api/fhir'.freeze
 
       class ApiError < StandardError; end
