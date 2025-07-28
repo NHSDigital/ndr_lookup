@@ -19,10 +19,8 @@ module NdrLookup
           @additional_headers ||= {}
         end
 
-        # Not implemented yet - will handle syncing data when this is available
-        # TODO: This has become 'search'. We'd have to rewrite sync functionality via search
-        def sync(date)
-          raise NotImplementedError
+        def sync
+          raise 'Must be defined in subclasses!'
         end
 
         # Finds a specific FHIR resource by type and ID

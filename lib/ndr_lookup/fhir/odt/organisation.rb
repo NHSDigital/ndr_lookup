@@ -40,6 +40,18 @@ module NdrLookup
             []
           end
 
+          def sync(date)
+            formatted_date = case date
+                             when Date, Time
+                               date.strftime('%Y-%m-%d')
+                             else
+                               date.to_s
+                             end
+
+            search_params = { _lastUpdated: "gt#{formatted_date}" }
+            Client.search('Organization', search_params)
+          end
+
           private
 
           def logger
