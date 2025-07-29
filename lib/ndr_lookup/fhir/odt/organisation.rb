@@ -31,7 +31,7 @@ module NdrLookup
           # Searches for organizations matching the provided parameters
           # @return [Array<Organisation>] Matching organizations
           def search(params = {})
-            response = Client.search(params)
+            response = Client.search('Organization', params)
             return [] unless response['entry']
 
             response['entry'].map { |entry| new(entry['resource']) }
@@ -49,7 +49,7 @@ module NdrLookup
                              end
 
             search_params = { _lastUpdated: "gt#{formatted_date}" }
-            Client.search('Organization', search_params)
+            search(search_params)
           end
 
           private

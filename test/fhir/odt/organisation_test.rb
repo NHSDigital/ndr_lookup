@@ -43,6 +43,37 @@ module NdrLookup
 
           assert_nil org
         end
+
+        def test_sync_returns_empty_array_when_no_results
+          url = "#{ODT_ENDPOINT}/Organization?_lastUpdated=gt2025-06-01"
+          file = File.new("#{RESPONSES_DIR}/fhir/organisation_sync_empty_response.txt")
+          stub_request(:get, url).to_return(file)
+
+          orgs = Organisation.sync('2025-06-01')
+
+          assert_instance_of Array, orgs
+          assert_empty orgs
+        end
+
+        def test_sync_formats_date_object_correctly
+          date = Date.new(2025, 6, 1)
+          url = "#{ODT_ENDPOINT}/Organization?_lastUpdated=gt2025-06-01"
+          file = File.new("#{RESPONSES_DIR}/fhir/organisation_sync_success_response.txt")
+          stub_request(:get, url).to_return(file)
+
+          orgs = Organisation.sync(date)
+
+          assert_instance_of Array, orgs
+        end
+
+        def test_sync_handles_api_error_gracefully
+          url = "#{ODT_ENDPOINT}/Organization?_lastUpdated=gt2025-06-01"
+          stub_request(:get, url).to_return(status: 500, body: 'Server Error')
+
+          orgs = Organisation.sync('2025-06-01')
+
+          assert_equal [], orgs
+        end
       end
     end
   end
