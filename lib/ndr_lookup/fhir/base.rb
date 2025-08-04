@@ -6,8 +6,6 @@ module NdrLookup
   module Fhir
     # Client for interacting with the NHS Digital FHIR API
     class Base < ActiveResource::Base
-      # ENDPOINT = 'https://api.service.nhs.uk/organisation-data-terminology-api/fhir'.freeze
-
       class ApiError < StandardError; end
       class ResourceNotFound < ApiError; end
       class InvalidResponse < ApiError; end
