@@ -28,10 +28,10 @@ module NdrLookup
         stub_request(:get, 'https://api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/X26').
           with(
             headers: {
-        	     'Accept' => 'application/fhir+json',
-        	     'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        	     'Content-Type' => 'application/fhir+json',
-        	     'User-Agent' => 'Ruby'
+              'Accept' => 'application/fhir+json',
+              'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+              'Content-Type' => 'application/fhir+json',
+              'User-Agent' => 'Ruby'
             }
           ).
           to_return(status: 200, body: '', headers: {})
