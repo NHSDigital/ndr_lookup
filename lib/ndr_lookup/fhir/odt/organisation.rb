@@ -69,6 +69,19 @@ module NdrLookup
           attributes.deep_transform_keys!(&:downcase) if attributes.is_a?(Hash)
           super
         end
+
+        private
+
+        # Prevents Date constants from raising errors
+        # When ActiveResource tries to process something called 'Date'
+        # it would call const_valid?('Date', false).
+        # This would return false, making ActiveResource skip trying to create a Date constant and
+        # instead fall back to creating an :UnnamedResource.
+        def const_valid?(*const_args)
+          return false if const_args.first == 'Date'
+
+          super
+        end
       end
     end
   end
