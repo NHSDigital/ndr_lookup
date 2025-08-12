@@ -64,17 +64,8 @@ module NdrLookup
         end
 
         # Initializes a new Organization with downcased attributes
-        def initialize(attributes = {}, persisted = false)
+        def initialize(attributes = {})
           attributes.deep_transform_keys!(&:downcase) if attributes.is_a?(Hash)
-          super
-        end
-
-        private
-
-        # Prevents Date constants from raising errors
-        def const_valid?(*const_args)
-          return false if const_args.first == 'Date'
-
           super
         end
       end
