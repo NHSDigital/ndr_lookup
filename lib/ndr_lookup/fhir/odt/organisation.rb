@@ -6,6 +6,7 @@ module NdrLookup
   module Fhir
     module Odt
       # Represents an Organization resource from the NHS Digital FHIR API
+      # The main endpoint path we are using is 'OrganiSation' but full API path calls also include 'OrganiZation'
       class Organisation < Base
         self.include_format_in_path = false
         self.site = Client::FHIR_ODT_ENDPOINT
