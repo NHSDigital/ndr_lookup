@@ -22,8 +22,8 @@ module NdrLookup
         begin
           NdrLookup::NhsdOds::Organisation.all
         rescue StandardError => e
-          puts e.class
-          puts e.message
+          assert_equal ActiveResource::ClientError, e.class
+          assert_equal 'Failed.  Response code = 406.  Response message = .', e.message
         end
       end
     end
