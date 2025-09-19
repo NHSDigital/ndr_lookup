@@ -19,7 +19,7 @@ module NdrLookup
         file = File.new(RESPONSES_DIR + '/nhsd_ods/organisation_all_not_acceptable_response.txt')
         stub_request(:get, url).to_return(file)
 
-        assert_raises do
+        assert_raises(ActiveResource::ClientError) do
           NdrLookup::NhsdOds::Organisation.all
         end
       end
