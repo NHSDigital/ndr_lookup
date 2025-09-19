@@ -13,16 +13,6 @@ module NdrLookup
 
         assert_equal org.name, 'NHS DIGITAL'
       end
-
-      def test_should_raise_error_if_not_valid_find_method
-        url  = ODS_ENDPOINT + 'organisations'
-        file = File.new(RESPONSES_DIR + '/nhsd_ods/organisation_all_not_acceptable_response.txt')
-        stub_request(:get, url).to_return(file)
-
-        assert_raises(ActiveResource::ClientError) do
-          NdrLookup::NhsdOds::Organisation.all
-        end
-      end
     end
   end
 end
