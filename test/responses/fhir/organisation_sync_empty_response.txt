@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+date: Tue, 29 Jul 2025 08:48:38 GMT
+content-type: application/fhir+json;charset=UTF-8
+transfer-encoding: chunked
+connection: close
+access-control-max-age: 1728000
+x-cache-status: MISS
+last-modified: Tue, 29 Jul 2025 08:48:38 GMT
+x-krakend: Version 2.4.1
+x-krakend-completed: false
+x-powered-by: HAPI FHIR 7.0.2 REST Server (FHIR Server; FHIR 4.0.1/R4)
+x-request-id: 5079b41c39327844892ff84f9b879231
+strict-transport-security: max-age=31536000; includeSubDomains
+access-control-allow-origin: *
+access-control-allow-credentials: true
+access-control-allow-methods: GET, OPTIONS
+access-control-allow-headers: DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,Prefer,Pragma,If-Match,If-None-Match
+x-cache: Miss from cloudfront
+via: 1.1 32454b720dce934befa2d50bacc6d890.cloudfront.net (CloudFront)
+x-amz-cf-pop: LHR50-P5
+x-amz-cf-id: 8518vcaAHGVXcwsYgZF2PYzuPtAO9pBDqi3VW6-P0x1Y562uNRI4tg==
+
+{
+  "resourceType": "Bundle",
+  "id": "empty-results-id",
+  "meta": {
+    "lastUpdated": "2025-07-29T08:48:38.901+00:00"
+  },
+  "type": "searchset",
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization?_lastUpdated=gt2025-06-01"
+    }
+  ],
+  "entry": []
+}

@@ -1,0 +1,32 @@
+HTTP/1.1 404 Not Found
+Date: Tue, 24 Jun 2025 13:10:16 GMT
+Content-Type: application/fhir+json;charset=UTF-8
+Content-Length: 471
+Connection: keep-alive
+Access-Control-Max-Age: 1728000
+X-Krakend: Version 2.4.1
+X-Krakend-Completed: false
+X-Powered-By: HAPI FHIR 7.0.2 REST Server (FHIR Server; FHIR 4.0.1/R4)
+X-Request-Id: a524824ed9f378f9790a289f24d165e3
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Headers: DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,Prefer,Pragma,If-Match,If-None-Match
+X-Cache: Error from cloudfront
+Via: 1.1 ecb6880220cec19d7d48fb6d26bdb1f6.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: LHR50-P5
+X-Amz-Cf-Id: 2biiyMAKO3ue7XIFjC82b2J-UYyavJBZajl0yzTahpaufYfS7pQRDA==
+
+{
+  "resourceType": "OperationOutcome",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">ERROR</td><td>[]</td><td>HAPI-2001: Resource Organization/X9999 is not known</td></tr></table></div>"
+  },
+  "issue": [ {
+    "severity": "error",
+    "code": "processing",
+    "diagnostics": "HAPI-2001: Resource Organization/X9999 is not known"
+  } ]
+}

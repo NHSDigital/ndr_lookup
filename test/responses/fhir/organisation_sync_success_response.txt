@@ -1,0 +1,2593 @@
+HTTP/1.1 200 OK
+date: Tue, 29 Jul 2025 08:48:38 GMT
+content-type: application/fhir+json;charset=UTF-8
+transfer-encoding: chunked
+connection: close
+access-control-max-age: 1728000
+x-cache-status: MISS
+last-modified: Tue, 29 Jul 2025 08:48:38 GMT
+x-krakend: Version 2.4.1
+x-krakend-completed: false
+x-powered-by: HAPI FHIR 7.0.2 REST Server (FHIR Server; FHIR 4.0.1/R4)
+x-request-id: 5079b41c39327844892ff84f9b879231
+strict-transport-security: max-age=31536000; includeSubDomains
+access-control-allow-origin: *
+access-control-allow-credentials: true
+access-control-allow-methods: GET, OPTIONS
+access-control-allow-headers: DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,Prefer,Pragma,If-Match,If-None-Match
+x-cache: Miss from cloudfront
+via: 1.1 32454b720dce934befa2d50bacc6d890.cloudfront.net (CloudFront)
+x-amz-cf-pop: LHR50-P5
+x-amz-cf-id: 8518vcaAHGVXcwsYgZF2PYzuPtAO9pBDqi3VW6-P0x1Y562uNRI4tg==
+
+{
+  "resourceType": "Bundle",
+  "id": "9ad6eed8-31ff-42e0-8702-3e264c3a2443",
+  "meta": {
+    "lastUpdated": "2025-07-29T08:48:38.901+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization?_lastUpdated=gt2025-06-01"
+  }, {
+    "relation": "next",
+    "url": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization?_count=20&_lastUpdated=gt2025-06-01&_offset=20"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/11M",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "11M",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-06-20T01:25:58.302+00:00",
+        "source": "#da2c3e1097e56edf",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 161521
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO98",
+              "display": "CLINICAL COMMISSIONING GROUP"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2013-04-01"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2011-12-13"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 486077
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO319",
+              "display": "SUB ICB LOCATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2022-07-01"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2022-07-01"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-06-19"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "11M",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "NHS GLOUCESTERSHIRE ICB - 11M",
+      "address": [ {
+        "extension": [ {
+          "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
+                "code": "UPRN",
+                "display": "Unique Property Reference Number"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueString": "100121246059"
+          } ]
+        } ],
+        "line": [ "SHIRE HALL", "WESTGATE STREET" ],
+        "city": "GLOUCESTER",
+        "postalCode": "GL1 2TG",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/36L",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "36L",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-07-04T01:07:06.102+00:00",
+        "source": "#c4f6fe5d97431b34",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 386496
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO98",
+              "display": "CLINICAL COMMISSIONING GROUP"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2020-04-01"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2019-10-23"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 486095
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO319",
+              "display": "SUB ICB LOCATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2022-07-01"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2022-07-01"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 521931
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO326",
+              "display": "ICB COMMISSIONING PROXY"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2024-04-01"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2024-04-01"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-07-03"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "36L",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "NHS SOUTH WEST LONDON ICB - 36L",
+      "address": [ {
+        "line": [ "120 THE BROADWAY" ],
+        "city": "LONDON",
+        "district": "GREATER LONDON",
+        "postalCode": "SW19 1RH",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/72Q",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "72Q",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-07-04T01:07:06.184+00:00",
+        "source": "#c4f6fe5d97431b34",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 386495
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO98",
+              "display": "CLINICAL COMMISSIONING GROUP"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2020-04-01"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2019-10-23"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 486100
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO319",
+              "display": "SUB ICB LOCATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2022-07-01"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2022-07-01"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 521932
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO326",
+              "display": "ICB COMMISSIONING PROXY"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2024-04-01"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2024-04-01"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-07-03"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "72Q",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "NHS SOUTH EAST LONDON ICB - 72Q",
+      "address": [ {
+        "line": [ "160 TOOLEY STREET" ],
+        "city": "LONDON",
+        "postalCode": "SE1 2TZ",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/7A6P1",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "7A6P1",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2025-07-10T01:11:15.271+00:00",
+        "source": "#9d7e331dd9431451",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 393301
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO148",
+              "display": "LOCAL HEALTH BOARD SITE"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2020-04-01"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2020-04-01"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-07-09"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "7A6P1",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC2",
+          "display": "HSCSite"
+        } ]
+      } ],
+      "name": "NEWPORT NORTH EAST",
+      "address": [ {
+        "extension": [ {
+          "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
+                "code": "UPRN",
+                "display": "Unique Property Reference Number"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueString": "200002951691"
+          } ]
+        } ],
+        "line": [ "ST. CADOCS HOSPITAL", "LODGE ROAD", "CAERLEON" ],
+        "city": "NEWPORT",
+        "postalCode": "NP18 3XQ",
+        "country": "WALES"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/7A6P2",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "7A6P2",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2025-07-10T01:11:15.342+00:00",
+        "source": "#9d7e331dd9431451",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 393300
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO148",
+              "display": "LOCAL HEALTH BOARD SITE"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2020-04-01"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2020-04-01"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-07-09"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "7A6P2",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC2",
+          "display": "HSCSite"
+        } ]
+      } ],
+      "name": "NEWPORT SOUTH EAST",
+      "address": [ {
+        "extension": [ {
+          "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
+                "code": "UPRN",
+                "display": "Unique Property Reference Number"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueString": "100100972009"
+          } ]
+        } ],
+        "line": [ "19 HILLS HEALTH & WELLBEING CENTRE", "RINGLAND CIRCLE" ],
+        "city": "NEWPORT",
+        "postalCode": "NP19 9PS",
+        "country": "WALES"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/7A6P4",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "7A6P4",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2025-07-10T01:11:15.360+00:00",
+        "source": "#9d7e331dd9431451",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 393299
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO148",
+              "display": "LOCAL HEALTH BOARD SITE"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2020-04-01"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2020-04-01"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-07-09"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "7A6P4",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC2",
+          "display": "HSCSite"
+        } ]
+      } ],
+      "name": "NEWPORT SOUTH WEST",
+      "address": [ {
+        "extension": [ {
+          "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
+                "code": "UPRN",
+                "display": "Unique Property Reference Number"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueString": "10002148131"
+          } ]
+        } ],
+        "line": [ "ST. WOOLOS HOSPITAL", "131 STOW HILL" ],
+        "city": "NEWPORT",
+        "postalCode": "NP20 4SZ",
+        "country": "WALES"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/7A6R6",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "7A6R6",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2025-07-10T01:11:15.394+00:00",
+        "source": "#9d7e331dd9431451",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 345185
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO148",
+              "display": "LOCAL HEALTH BOARD SITE"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2019-04-01"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2019-04-01"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-07-09"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "7A6R6",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC2",
+          "display": "HSCSite"
+        } ]
+      } ],
+      "name": "NEWPORT CENTRAL WEST",
+      "address": [ {
+        "extension": [ {
+          "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
+                "code": "UPRN",
+                "display": "Unique Property Reference Number"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueString": "10002148131"
+          } ]
+        } ],
+        "line": [ "ST. WOOLOS HOSPITAL", "131 STOW HILL" ],
+        "city": "NEWPORT",
+        "postalCode": "NP20 4SZ",
+        "country": "WALES"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/8FV54",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8FV54",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-06-05T01:11:09.954+00:00",
+        "source": "#bbbe0dd743485bdd",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 116201
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO157",
+              "display": "NON-NHS ORGANISATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "1999-04-01"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "1999-04-01"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-06-04"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "8FV54",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "QINETIQ LTD",
+      "telecom": [ {
+        "system": "phone",
+        "value": "01252 392369"
+      } ],
+      "address": [ {
+        "extension": [ {
+          "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
+                "code": "UPRN",
+                "display": "Unique Property Reference Number"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueString": "37032485"
+          } ]
+        } ],
+        "line": [ "HASLAR ROAD" ],
+        "city": "GOSPORT",
+        "postalCode": "PO12 2AG",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/8HF02",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8HF02",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2025-06-27T01:26:21.631+00:00",
+        "source": "#f8d7bf1218ea2593",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 37100
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO157",
+              "display": "NON-NHS ORGANISATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2006-12-04"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2006-12-04"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-06-26"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "8HF02",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "MAGENTUS SOFTWARE LIMITED",
+      "address": [ {
+        "line": [ "SECOND FLOOR", "75 FARRINGDON ROAD" ],
+        "city": "LONDON",
+        "postalCode": "EC1M 3JY",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/8HC51",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8HC51",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-07-11T01:11:21.907+00:00",
+        "source": "#cb5e27a56f2993b4",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 20142
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO157",
+              "display": "NON-NHS ORGANISATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2006-05-18"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2006-05-18"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-07-10"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "8HC51",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "VOICE CONNECT LTD",
+      "address": [ {
+        "extension": [ {
+          "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
+                "code": "UPRN",
+                "display": "Unique Property Reference Number"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueString": "60035704"
+          } ]
+        } ],
+        "line": [ "FOCUS HOUSE", "20 HAM ROAD" ],
+        "city": "SHOREHAM-BY-SEA",
+        "postalCode": "BN43 6PA",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/8HC79",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8HC79",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-06-04T01:10:55.436+00:00",
+        "source": "#e1626a81c6ba46b9",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 51304
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO157",
+              "display": "NON-NHS ORGANISATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2006-06-14"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2006-06-14"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-06-03"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "8HC79",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "AZZURRI COMMUNICATIONS",
+      "address": [ {
+        "line": [ "69 LEADENHALL STREET" ],
+        "city": "LONDON",
+        "district": "GREATER LONDON",
+        "postalCode": "EC3A 2BG",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/8HH25",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8HH25",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-06-14T01:10:59.734+00:00",
+        "source": "#360ee6076f9366b8",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 130943
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO157",
+              "display": "NON-NHS ORGANISATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2007-05-29"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2007-05-29"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-06-13"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "8HH25",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "MSOFT360.CLOUD LIMITED",
+      "telecom": [ {
+        "system": "phone",
+        "value": "0870 0100704"
+      } ],
+      "address": [ {
+        "extension": [ {
+          "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
+                "code": "UPRN",
+                "display": "Unique Property Reference Number"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueString": "42188036"
+          } ]
+        } ],
+        "line": [ "GATEWAY HOUSE", "OLD HALL ROAD", "BROMBOROUGH" ],
+        "city": "WIRRAL",
+        "district": "MERSEYSIDE",
+        "postalCode": "CH62 3NX",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/8HJ09",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8HJ09",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-06-24T01:11:00.848+00:00",
+        "source": "#f2b717a2e7f808a4",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 24117
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO157",
+              "display": "NON-NHS ORGANISATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2007-08-15"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2007-08-15"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-06-23"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "8HJ09",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "PURCELL RADIO SYSTEMS",
+      "address": [ {
+        "line": [ "5 GREENWICH VIEW PLACE" ],
+        "city": "LONDON",
+        "postalCode": "E14 9NN",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/8HN06",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8HN06",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-07-09T01:10:19.718+00:00",
+        "source": "#91a157559911f0d8",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 134331
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO157",
+              "display": "NON-NHS ORGANISATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2009-06-02"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2009-06-02"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-07-08"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "8HN06",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "ADVANCED HEALTH AND CARE LTD",
+      "address": [ {
+        "extension": [ {
+          "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
+                "code": "UPRN",
+                "display": "Unique Property Reference Number"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueString": "10024333046"
+          } ]
+        } ],
+        "line": [ "THE MAILBOX", "LEVEL 3", "101 WHARFSIDE STREET" ],
+        "city": "BIRMINGHAM",
+        "postalCode": "B1 1RF",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/8HN84",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8HN84",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-07-29T01:07:00.455+00:00",
+        "source": "#4fb0e36e4249d9f0",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 55260
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO157",
+              "display": "NON-NHS ORGANISATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2010-01-22"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2010-01-22"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-07-28"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "8HN84",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "TELEMEDICINE CLINIC LTD",
+      "address": [ {
+        "line": [ "DAVIDSON HOUSE", "THE FORBURY" ],
+        "city": "READING",
+        "district": "BERKSHIRE",
+        "postalCode": "RG1 3EU",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/8HP75",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8HP75",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-07-01T01:07:15.163+00:00",
+        "source": "#0c3aee820d130c61",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 128395
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO157",
+              "display": "NON-NHS ORGANISATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2010-07-21"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2010-07-21"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-06-30"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "8HP75",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "NATIONAL CHILDBIRTH TRUST",
+      "address": [ {
+        "line": [ "27 OLD GLOUCESTER STREET" ],
+        "city": "LONDON",
+        "district": "GREATER LONDON",
+        "postalCode": "WC1N 3AX",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/8HW14",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8HW14",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2025-06-21T01:21:52.592+00:00",
+        "source": "#6a93a692894e5770",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 113225
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO157",
+              "display": "NON-NHS ORGANISATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2012-01-23"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2012-01-23"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-06-20"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "8HW14",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "TELSTRA HEALTH UK LIMITED",
+      "telecom": [ {
+        "system": "phone",
+        "value": "0207 3328841"
+      } ],
+      "address": [ {
+        "line": [ "BIOCITY NOTTINGHAM", "PENNYFOOT STREET" ],
+        "city": "NOTTINGHAM",
+        "district": "NOTTINGHAMSHIRE",
+        "postalCode": "NG1 1GF",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/8HX75",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8HX75",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2025-06-07T01:11:09.242+00:00",
+        "source": "#8c4c8165d873feb1",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 161179
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO157",
+              "display": "NON-NHS ORGANISATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2012-05-23"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2012-05-23"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-06-06"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "8HX75",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "THE RELATIONSHIPS SERVICE",
+      "address": [ {
+        "extension": [ {
+          "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
+                "code": "UPRN",
+                "display": "Unique Property Reference Number"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueString": "10002010873"
+          } ]
+        } ],
+        "line": [ "THE GABLES", "3 ST. MARYS ROAD" ],
+        "city": "HEMEL HEMPSTEAD",
+        "postalCode": "HP2 5HL",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/8HY69",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8HY69",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-07-08T01:10:39.596+00:00",
+        "source": "#c8b540aabe90e64e",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 163012
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO157",
+              "display": "NON-NHS ORGANISATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2012-08-09"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2012-08-09"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-07-07"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "8HY69",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "AGE UK HILLINGDON, HARROW AND BRENT",
+      "address": [ {
+        "extension": [ {
+          "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
+                "code": "UPRN",
+                "display": "Unique Property Reference Number"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueString": "100023416121"
+          } ]
+        } ],
+        "line": [ "UNIT 3", "CHAPEL COURT", "126 CHURCH ROAD" ],
+        "city": "HAYES",
+        "postalCode": "UB3 2LW",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://sandbox.api.service.nhs.uk/organisation-data-terminology-api/fhir/Organization/8J230",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "8J230",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-06-11T01:10:59.986+00:00",
+        "source": "#1a7b0e1bbe3fec54",
+        "profile": [ "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization", "https://fhir.nhs.uk/England/StructureDefinition/England-Organization-ODS" ]
+      },
+      "extension": [ {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole",
+        "extension": [ {
+          "url": "instanceID",
+          "valueInteger": 170645
+        }, {
+          "url": "roleCode",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSOrganisationRole",
+              "code": "RO157",
+              "display": "NON-NHS ORGANISATION"
+            } ]
+          }
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Legal",
+              "display": "Legal"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2013-05-16"
+            }
+          } ]
+        }, {
+          "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod",
+          "extension": [ {
+            "url": "dateType",
+            "valueCoding": {
+              "system": "https://fhir.nhs.uk/England/CodeSystem/England-PeriodType",
+              "code": "Operational",
+              "display": "Operational"
+            }
+          }, {
+            "url": "period",
+            "valuePeriod": {
+              "start": "2013-05-16"
+            }
+          } ]
+        }, {
+          "url": "active",
+          "valueBoolean": true
+        } ]
+      }, {
+        "url": "https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime",
+        "extension": [ {
+          "url": "type",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSDateTime",
+            "code": "LastChangeDate",
+            "display": "Last Change Date"
+          }
+        }, {
+          "url": "dateTime",
+          "valueDateTime": "2025-06-10"
+        } ]
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "8J230",
+        "assigner": {
+          "display": "HSCIC"
+        }
+      } ],
+      "active": true,
+      "type": [ {
+        "coding": [ {
+          "system": "https://fhir.nhs.uk/England/CodeSystem/England-ODSRecordUseType",
+          "code": "Full",
+          "display": "Full"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass",
+          "code": "RC1",
+          "display": "HSCOrg"
+        } ]
+      } ],
+      "name": "PEOPLE ASSET MANAGEMENT LIMITED",
+      "address": [ {
+        "line": [ "9 LAKESIDE DRIVE", "820 MANDARIN COURT" ],
+        "city": "WARRINGTON",
+        "district": "CHESHIRE",
+        "postalCode": "WA1 1GG",
+        "country": "ENGLAND"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}
