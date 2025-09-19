@@ -19,8 +19,11 @@ module NdrLookup
         file = File.new(RESPONSES_DIR + '/nhsd_ods/organisation_all_not_acceptable_response.txt')
         stub_request(:get, url).to_return(file)
 
-        assert_raises do
+        begin
           NdrLookup::NhsdOds::Organisation.all
+        rescue StandardError => e
+          assert_equal ActiveResource::ClientError, e.class
+          assert_equal 'Failed.  Response code = 406.  Response message = .', e.message
         end
       end
     end
