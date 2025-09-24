@@ -20,7 +20,7 @@ module NdrLookup
         stub_request(:get, url).to_return(file)
 
         assert_raises do
-          NdrLookup::NhsdOds::Organisation.all
+          NdrLookup::NhsdOds::Organisation.any?
         end
       end
     end
