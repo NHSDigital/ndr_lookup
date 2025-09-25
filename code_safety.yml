@@ -26,8 +26,8 @@ file safety:
     safe_revision: 18964c87034df7f8aaf7318135b70248d0e461db
   CHANGELOG.md:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: aa91cd09121909cd2170c58fe5af9b68fd1a2456
+    reviewed_by: kenny.lee
+    safe_revision: 40d5be5305c58d2fb09db0c1ac71101fa14a3e65
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: timgentry
@@ -74,8 +74,20 @@ file safety:
     safe_revision: aa91cd09121909cd2170c58fe5af9b68fd1a2456
   lib/ndr_lookup.rb:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: 5f3c8ef45ca4c4f747ea51a9c1afb4887582cd19
+    reviewed_by: kenny.lee
+    safe_revision: 04ea66f94e1745af868684c4100bcd9c34a3de73
+  lib/ndr_lookup/fhir/base.rb:
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: 455e6516dd7495c27e3fd2bfe53aea7e6a5ff811
+  lib/ndr_lookup/fhir/odt/client.rb:
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: 4b8ba26e269902bb3d6eb85af724b8ff975b2cb1
+  lib/ndr_lookup/fhir/odt/organisation.rb:
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: adf2751fa048e11469eebadd32dbbf9379aadaee
   lib/ndr_lookup/locator_hub/client.rb:
     comments:
     reviewed_by: josh.pencheon
@@ -106,8 +118,8 @@ file safety:
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
   lib/ndr_lookup/version.rb:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: 5a255ccbccd4527d06459ad4d88bb0f760f5a0e5
+    reviewed_by: kenny.lee
+    safe_revision: 40d5be5305c58d2fb09db0c1ac71101fa14a3e65
   lib/tasks/locator_hub.rake:
     comments:
     reviewed_by: timgentry
@@ -116,6 +128,14 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: aa91cd09121909cd2170c58fe5af9b68fd1a2456
+  test/fhir/base_test.rb:
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: b0e52003666b4570e7becd8fadbcdc71a084e11c
+  test/fhir/odt/organisation_test.rb:
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: 37faa65a7f816f3278f9c9e55341a23956d8152c
   test/locator_hub/client_test.rb:
     comments:
     reviewed_by: timgentry
@@ -134,8 +154,32 @@ file safety:
     safe_revision: f35dd4a3c26439681f82a9fb4cd58b35751bee3a
   test/nhsd_ods/organisation_test.rb:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: bff10e86557e6039d21cdc7c2225afbea39f3f28
+    reviewed_by: kenny.lee
+    safe_revision: 2a8fe09728fe3049cb22bdea307eede38312981d
+  test/responses/fhir/metadata_not_found_response.txt:
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: 21b4b1d8713780c5ab518ea7a1a8dd92a4cb2242
+  test/responses/fhir/organisation_all_not_acceptable_response.txt:
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: 66ef4d6b0b1304c289e86eb056fed57610a76669
+  test/responses/fhir/organisation_find_success_response.txt:
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: 21b4b1d8713780c5ab518ea7a1a8dd92a4cb2242
+  test/responses/fhir/organisation_sync_empty_response.txt:
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: 37faa65a7f816f3278f9c9e55341a23956d8152c
+  test/responses/fhir/organisation_sync_success_response.txt:
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: 37faa65a7f816f3278f9c9e55341a23956d8152c
+  test/responses/fhir/search_success_response.txt:
+    comments:
+    reviewed_by: kenny.lee
+    safe_revision: 18bbf1dd6cd1bec0e6919fb2f77ac7a61d1d04f2
   test/responses/nhsd_ods/metadata_not_found_response.txt:
     comments:
     reviewed_by: brian.shand
@@ -190,5 +234,5 @@ file safety:
     safe_revision: 4e81189405a9bda4674c43d5290c83e53edd2cf9
   test/test_helper.rb:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: 4e81189405a9bda4674c43d5290c83e53edd2cf9
+    reviewed_by: kenny.lee
+    safe_revision: 788c44558b2ef70af671512efb510d14c9f9c62f
