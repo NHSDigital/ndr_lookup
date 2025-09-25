@@ -1,6 +1,10 @@
 ## [Unreleased]
 * no unreleased changes
 
+## 0.1.4 / 2025-09-19
+### Added
+* Added NHS FHIR ODT client
+
 ## 0.1.3 / 2024-11-19
 ### Fixed
 * Support Ruby 3.3, Rails 7.1, 7.2 and 8.0. Drop support for Ruby 3.0, Rails 6.1
