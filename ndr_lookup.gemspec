@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'activeresource', '>= 6.0', '< 7'
-  spec.add_dependency 'activesupport', '>= 7.0', '< 8.1'
+  spec.add_dependency 'activesupport', '>= 7.1', '< 8.1'
   spec.add_dependency 'httpi', '~> 4.0'
   spec.add_dependency 'rubyntlm', '~> 0.6'
 
@@ -32,5 +32,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '>= 12.3.3'
   spec.add_development_dependency 'webmock'
 
-  spec.required_ruby_version = '>= 3.0'
+  spec.required_ruby_version = '>= 3.2'
 end
