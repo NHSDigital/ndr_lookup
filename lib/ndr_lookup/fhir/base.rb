@@ -26,21 +26,10 @@ module NdrLookup
         # Finds a specific FHIR resource by type and ID
         # @return [Hash] Parsed FHIR resource
         def find(resource_type, id)
-          response = connection.get(
-            "#{endpoint}/#{resource_type}/#{id}",
-            headers
-          )
-          JSON.parse(response.body)
-        rescue ActiveResource::ResourceNotFound
-          raise ResourceNotFound, "#{resource_type} with ID '#{id}' not found"
-        rescue ActiveResource::UnauthorizedAccess
-          raise UnauthorizedError, 'Authentication failed'
-        rescue JSON::ParserError
-          raise InvalidResponse, 'Invalid JSON response from server'
-        rescue URI::InvalidURIError => e
-          raise InvalidURIError, "Invalid ID format: #{e.message}"
-        rescue StandardError => e
-          raise ApiError, "Unexpected error: #{e.message}"
+          with_error_handling("#{resource_type} with ID '#{id}' not found") do
+            response = connection.get("#{endpoint}/#{resource_type}/#{id}", headers)
+            JSON.parse(response.body)
+          end
         end
 
         def endpoint
@@ -57,16 +46,21 @@ module NdrLookup
         # @example Search for relationships
         #   Client.search('OrganizationAffiliation', organization: 'RHAGX')
         def search(resource_type, params = {})
-          url = construct_url(endpoint, resource_type, params)
+          with_error_handling do
+            url = construct_url(endpoint, resource_type, params)
+            response = connection.get(url, headers)
+            payload = JSON.parse(response.body)
+            raise_unless_response_success(response, payload)
+            payload
+          end
+        end
 
-          # Make the request
-          response = connection.get(url, headers)
+        private
 
-          # Process response
-          payload = JSON.parse(response.body)
-          raise_unless_response_success(response, payload)
-
-          payload
+        def with_error_handling(not_found_message = nil)
+          yield
+        rescue ActiveResource::ResourceNotFound
+          raise ResourceNotFound, not_found_message || 'Resource not found'
         rescue ActiveResource::UnauthorizedAccess
           raise UnauthorizedError, 'Authentication failed'
         rescue JSON::ParserError
@@ -74,10 +68,8 @@ module NdrLookup
         rescue URI::InvalidURIError => e
           raise InvalidURIError, "Invalid ID format: #{e.message}"
         rescue StandardError => e
-          raise ApiError, "Search failed: #{e.message}"
+          raise ApiError, "Unexpected error: #{e.message}"
         end
-
-        private
 
         def construct_url(endpoint, resource_type, params = {})
           url = "#{endpoint}/#{resource_type}"
