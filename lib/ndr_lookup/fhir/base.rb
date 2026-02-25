@@ -9,6 +9,8 @@ module NdrLookup
       class ApiError < StandardError; end
       class ResourceNotFound < ApiError; end
       class InvalidResponse < ApiError; end
+      class InvalidURIError < ApiError; end
+      class UnauthorizedError < ApiError; end
 
       class << self
         attr_writer :additional_headers
@@ -31,8 +33,12 @@ module NdrLookup
           JSON.parse(response.body)
         rescue ActiveResource::ResourceNotFound
           raise ResourceNotFound, "#{resource_type} with ID '#{id}' not found"
+        rescue ActiveResource::UnauthorizedAccess
+          raise UnauthorizedError, 'Authentication failed'
         rescue JSON::ParserError
           raise InvalidResponse, 'Invalid JSON response from server'
+        rescue URI::InvalidURIError => e
+          raise InvalidURIError, "Invalid ID format: #{e.message}"
         rescue StandardError => e
           raise ApiError, "Unexpected error: #{e.message}"
         end
@@ -61,8 +67,12 @@ module NdrLookup
           raise_unless_response_success(response, payload)
 
           payload
+        rescue ActiveResource::UnauthorizedAccess
+          raise UnauthorizedError, 'Authentication failed'
         rescue JSON::ParserError
           raise InvalidResponse, 'Invalid JSON response from server'
+        rescue URI::InvalidURIError => e
+          raise InvalidURIError, "Invalid ID format: #{e.message}"
         rescue StandardError => e
           raise ApiError, "Search failed: #{e.message}"
         end
