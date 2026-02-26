@@ -6,6 +6,7 @@ module NdrLookup
   module Fhir
     # Client for interacting with the NHS Digital FHIR API
     class Base < ActiveResource::Base
+      # Specific error classes for different API failure modes
       class ApiError < StandardError; end
       class ResourceNotFound < ApiError; end
       class InvalidResponse < ApiError; end
@@ -57,6 +58,8 @@ module NdrLookup
 
         private
 
+        # Wraps API calls with consistent error handling, converting external exceptions
+        # (ActiveResource, JSON, URI) into our own error classes.
         def with_error_handling(not_found_message = nil)
           yield
         rescue ActiveResource::ResourceNotFound
