@@ -6,9 +6,12 @@ module NdrLookup
   module Fhir
     # Client for interacting with the NHS Digital FHIR API
     class Base < ActiveResource::Base
+      # Specific error classes for different API failure modes
       class ApiError < StandardError; end
       class ResourceNotFound < ApiError; end
       class InvalidResponse < ApiError; end
+      class InvalidURIError < ApiError; end
+      class UnauthorizedError < ApiError; end
 
       class << self
         attr_writer :additional_headers
@@ -24,17 +27,10 @@ module NdrLookup
         # Finds a specific FHIR resource by type and ID
         # @return [Hash] Parsed FHIR resource
         def find(resource_type, id)
-          response = connection.get(
-            "#{endpoint}/#{resource_type}/#{id}",
-            headers
-          )
-          JSON.parse(response.body)
-        rescue ActiveResource::ResourceNotFound
-          raise ResourceNotFound, "#{resource_type} with ID '#{id}' not found"
-        rescue JSON::ParserError
-          raise InvalidResponse, 'Invalid JSON response from server'
-        rescue StandardError => e
-          raise ApiError, "Unexpected error: #{e.message}"
+          with_error_handling("#{resource_type} with ID '#{id}' not found") do
+            response = connection.get("#{endpoint}/#{resource_type}/#{id}", headers)
+            JSON.parse(response.body)
+          end
         end
 
         def endpoint
@@ -51,23 +47,32 @@ module NdrLookup
         # @example Search for relationships
         #   Client.search('OrganizationAffiliation', organization: 'RHAGX')
         def search(resource_type, params = {})
-          url = construct_url(endpoint, resource_type, params)
-
-          # Make the request
-          response = connection.get(url, headers)
-
-          # Process response
-          payload = JSON.parse(response.body)
-          raise_unless_response_success(response, payload)
-
-          payload
-        rescue JSON::ParserError
-          raise InvalidResponse, 'Invalid JSON response from server'
-        rescue StandardError => e
-          raise ApiError, "Search failed: #{e.message}"
+          with_error_handling do
+            url = construct_url(endpoint, resource_type, params)
+            response = connection.get(url, headers)
+            payload = JSON.parse(response.body)
+            raise_unless_response_success(response, payload)
+            payload
+          end
         end
 
         private
+
+        # Wraps API calls with consistent error handling, converting external exceptions
+        # (ActiveResource, JSON, URI) into our own error classes.
+        def with_error_handling(not_found_message = nil)
+          yield
+        rescue ActiveResource::ResourceNotFound
+          raise ResourceNotFound, not_found_message || 'Resource not found'
+        rescue ActiveResource::UnauthorizedAccess
+          raise UnauthorizedError, 'Authentication failed'
+        rescue JSON::ParserError
+          raise InvalidResponse, 'Invalid JSON response from server'
+        rescue URI::InvalidURIError => e
+          raise InvalidURIError, "Invalid ID format: #{e.message}"
+        rescue StandardError => e
+          raise ApiError, "Unexpected error: #{e.message}"
+        end
 
         def construct_url(endpoint, resource_type, params = {})
           url = "#{endpoint}/#{resource_type}"
