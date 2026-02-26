@@ -6,12 +6,12 @@ file safety:
     safe_revision: 54e7746b7f2468ee4055723e9f1f1f0360871dc8
   ".github/workflows/lint.yml":
     comments:
-    reviewed_by: brian.shand
-    safe_revision: 9a92838129dab872eaea1fc1d1b2c65ec02c183f
+    reviewed_by: kenny.lee
+    safe_revision: bf99f36cdd7975d3fa9b181108e6dc47b71eb734
   ".github/workflows/test.yml":
     comments:
-    reviewed_by: brian.shand
-    safe_revision: aa91cd09121909cd2170c58fe5af9b68fd1a2456
+    reviewed_by: kenny.lee
+    safe_revision: bf99f36cdd7975d3fa9b181108e6dc47b71eb734
   ".gitignore":
     comments:
     reviewed_by: timgentry
@@ -27,7 +27,7 @@ file safety:
   CHANGELOG.md:
     comments:
     reviewed_by: kenny.lee
-    safe_revision: 40d5be5305c58d2fb09db0c1ac71101fa14a3e65
+    safe_revision: da8a788958df8ea5831aa3f6b2c38b005148bbbd
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: timgentry
@@ -56,10 +56,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
-  gemfiles/Gemfile.rails70:
-    comments:
-    reviewed_by: brian.shand
-    safe_revision: b62cdb143fcb9760ffc710ff0df1233b7bcdf841
   gemfiles/Gemfile.rails71:
     comments:
     reviewed_by: brian.shand
@@ -79,7 +75,7 @@ file safety:
   lib/ndr_lookup/fhir/base.rb:
     comments:
     reviewed_by: kenny.lee
-    safe_revision: 455e6516dd7495c27e3fd2bfe53aea7e6a5ff811
+    safe_revision: da8a788958df8ea5831aa3f6b2c38b005148bbbd
   lib/ndr_lookup/fhir/odt/client.rb:
     comments:
     reviewed_by: kenny.lee
@@ -119,15 +115,15 @@ file safety:
   lib/ndr_lookup/version.rb:
     comments:
     reviewed_by: kenny.lee
-    safe_revision: 40d5be5305c58d2fb09db0c1ac71101fa14a3e65
+    safe_revision: da8a788958df8ea5831aa3f6b2c38b005148bbbd
   lib/tasks/locator_hub.rake:
     comments:
     reviewed_by: timgentry
     safe_revision: ba0e19e0870a159ada2ae78b666062d5ff5891d1
   ndr_lookup.gemspec:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: aa91cd09121909cd2170c58fe5af9b68fd1a2456
+    reviewed_by: kenny.lee
+    safe_revision: bf99f36cdd7975d3fa9b181108e6dc47b71eb734
   test/fhir/base_test.rb:
     comments:
     reviewed_by: kenny.lee
