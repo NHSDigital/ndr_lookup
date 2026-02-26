@@ -1,4 +1,10 @@
 ## [Unreleased]
+
+## 0.3.0 / 2026-02-26
+### Added
+* Added specific error classes (InvalidURIError, UnauthorizedError) for granular error handling
+* Extracted common error handling into `with_error_handling` method
+
 ### Fixed
 * Support Ruby 3.4. Drop support for Rails 7.0, Ruby 3.1
 
