@@ -27,8 +27,9 @@ module NdrLookup
         # Finds a specific FHIR resource by type and ID
         # @return [Hash] Parsed FHIR resource
         def find(resource_type, id)
-          with_error_handling("#{resource_type} with ID '#{id}' not found") do
-            response = connection.get("#{endpoint}/#{resource_type}/#{id}", headers)
+          sanitized_id = id.to_s.strip
+          with_error_handling("#{resource_type} with ID '#{sanitized_id}' not found") do
+            response = connection.get("#{endpoint}/#{resource_type}/#{sanitized_id}", headers)
             JSON.parse(response.body)
           end
         end

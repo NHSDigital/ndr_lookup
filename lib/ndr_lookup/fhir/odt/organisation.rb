@@ -21,6 +21,9 @@ module NdrLookup
           rescue Client::ResourceNotFound => e
             logger.info("Organization not found: #{e.message}")
             nil
+          rescue Client::ApiError, Client::InvalidURIError => e
+            logger.warn("Organization lookup failed for '#{id}': #{e.message}")
+            nil
           end
 
           # ActiveRecord subs .all in to /all which then becomes like finding the id 'all'
