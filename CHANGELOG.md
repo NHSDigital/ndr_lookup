@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+## 0.3.1 / 2026-03-05
+### Fixed
+* Strip whitespace from IDs in FHIR Base.find to prevent bad URI errors
+* Handle ApiError/InvalidURIError gracefully in Organisation.find
+
 ## 0.3.0 / 2026-02-26
 ### Added
 * Added specific error classes (InvalidURIError, UnauthorizedError) for granular error handling

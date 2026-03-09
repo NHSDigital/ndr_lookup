@@ -74,6 +74,26 @@ module NdrLookup
 
           assert_equal [], orgs
         end
+
+        def test_find_handles_api_error_gracefully
+          url = "#{ODT_ENDPOINT}/Organization/X26"
+          stub_request(:get, url).to_timeout
+
+          org = Organisation.find('X26')
+
+          assert_nil org
+        end
+
+        def test_find_strips_whitespace_from_id
+          url = "#{ODT_ENDPOINT}/Organization/7A3C4"
+          file = File.new("#{RESPONSES_DIR}/fhir/organisation_find_success_response.txt")
+          stub_request(:get, url).to_return(file)
+
+          Organisation.find('7A3C4 ')
+
+          # WebMock would raise an error if the id is not sanitized
+          assert_requested(:get, url)
+        end
       end
     end
   end

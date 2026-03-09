@@ -48,6 +48,18 @@ module NdrLookup
           TestClient.find('Organization', 'X26')
         end
       end
+
+      def test_find_strips_whitespace_from_id
+        url  = "#{ODT_ENDPOINT}/Organization/7A3C4"
+        file = File.new("#{RESPONSES_DIR}/fhir/organisation_find_success_response.txt")
+        stub_request(:get, url).to_return(file)
+
+        response = TestClient.find('Organization', ' 7A3C4 ')
+
+        # WebMock would raise an error if the id is not sanitized
+        assert_kind_of(Hash, response)
+        assert_requested(:get, url)
+      end
     end
 
     class TestClient < Fhir::Base
